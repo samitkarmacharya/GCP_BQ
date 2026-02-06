@@ -9,7 +9,7 @@ Terraform-based Google Cloud infrastructure (dev + prod) with GitHub Actions CI/
 - `GCP_SERVICE_ACCOUNT_KEY` (full JSON key)
 - `GCP_PROJECT_ID`
 - `GCP_REGION`
- - `TF_VAR_SECRET_ENV` (JSON map of secret env vars, e.g. `{\"APP_NAME\":\"demo-dag\",\"MESSAGE_PREFIX\":\"Hello\"}`)
+- `TF_VAR_SECRET_ENV` (JSON map of secret env vars, e.g. `{\"APP_NAME\":\"demo-dag\",\"MESSAGE_PREFIX\":\"Hello\"}`)
 
 2. Add or update Terraform resources:
 
@@ -26,7 +26,8 @@ Terraform-based Google Cloud infrastructure (dev + prod) with GitHub Actions CI/
 - `infra/dev` Terraform config for dev
 - `infra/prod` Terraform config for prod
 - `.github/workflows/terraform.yml` CI/CD workflow
- - `Composer/` Cloud Run app + Dockerfile (demo-dag)
+- `Composer/` Cloud Run app + Dockerfile (demo-dag)
+- `lookml/` LookML project scaffolding
 
 ## Notes
 
