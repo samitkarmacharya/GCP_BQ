@@ -52,6 +52,7 @@ jobs:
         env:
           TF_VAR_project_id: ${{ secrets.GCP_PROJECT_ID }}
           TF_VAR_region: ${{ secrets.GCP_REGION }}
+          TF_VAR_secret_env: ${{ secrets.TF_VAR_SECRET_ENV }}
 
   terraform-apply:
     name: "Terraform Apply (dev + prod)"
@@ -90,3 +91,4 @@ jobs:
         env:
           TF_VAR_project_id: ${{ secrets.GCP_PROJECT_ID }}
           TF_VAR_region: ${{ secrets.GCP_REGION }}
+          TF_VAR_secret_env: ${{ secrets.TF_VAR_SECRET_ENV }}

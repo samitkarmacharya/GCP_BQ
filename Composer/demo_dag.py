@@ -1,18 +1,8 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
-import random
-
 from datetime import datetime
 
-def PrintHello():
-    return "Hello world!"
-
-def PrintGoodbye():
-    return "Goodbye!"
-
-def ErrorRandomly():
-    if random.choice([True, False]):
-        raise ValueError("Error randomly")
+from demo_tasks import PrintHello, PrintGoodbye, ErrorRandomly
 
 default_args = {
     "owner": "airflow",
